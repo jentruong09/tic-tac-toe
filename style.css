@@ -6,7 +6,7 @@
 :root {
     --cell-size: 100px;
     /* make the x & o marks 90% of the cell size */
-    --mark-size: cal(var(var(--cell-size))* .9);
+    --mark-size: calc(var(--cell-size)* .9);
 }
 
 body {
@@ -32,6 +32,11 @@ body {
     width: var(--cell-size);
     height: var(--cell-size);
     border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
 }
 
 /* getting rid of all side boarders */
@@ -53,4 +58,51 @@ body {
 .cell:nth-child(8),
 .cell:nth-child(7) {
     border-bottom: none;
+}
+
+/* when a cell is already taken, cursor will show not-allowed symbol */
+.cell.x, 
+.cell.circle {
+    cursor: not-allowed;
+}
+
+/* created a x, not using the key but two parallel line crossed */
+.cell.x::before,
+.cell.x::after {
+    content: '';
+    /* fixing offset of x */
+    position: absolute;
+    width: calc(var(--mark-size) * .15);
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.x::before {
+    transform: rotate(45deg);
+}
+
+.cell.x::after {
+    transform: rotate(-45deg);
+}
+
+/* created an o */
+.cell.circle::before,
+.cell.circle::after {
+    content: '';
+    /* fixing offset of o */
+    position: absolute;
+    border-radius: 50%;
+    background-color: black;
+}
+
+.cell.circle::before {
+    width: var(--mark-size);
+    height: var(--mark-size);
+    background-color: black;
+}
+
+.cell.circle::after {
+    width: calc(var(--mark-size) *.7);
+    height: calc(var(--mark-size) *.7);
+    background-color: white;
 }
