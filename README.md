@@ -22,17 +22,21 @@ Play and beat your friend at Tic-Tac-Toe!
 
 <br/>
 
-[Live Deployment]()
+[Live Deployment](https://jentruong09.github.io/tic-tac-toe/)
 
 <br/>
 
 ## Usage
+
+![webpage](/assets/images/tic-tac-toe.png)
 
 <br/>
 
 ## Credits
 
 [Web Dev Simplified - Build Tic Tac Toe With JavaScript - Tutorial](https://www.youtube.com/watch?v=Y-GkMjUZsmM)
+
+[Google Fonts](https://fonts.google.com)
 
 <br/>
 
