@@ -57,7 +57,7 @@ function endGame(draw) {
     if (draw) {
         finalScoreTextElement.innerText = 'Draw!'
     } else {
-        finalScoreTextElement.innerText = `${circleTurn ? "O's" : "X's"} Wins!`
+        finalScoreTextElement.innerText = `${circleTurn ? "Circle" : "X"} Wins!`
     }
     finalScoreElement.classList.add('show')
 }
